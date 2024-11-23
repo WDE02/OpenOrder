@@ -3,7 +3,9 @@
 
 A program to let you use the Stall program on the leaked sonic ordering system
 
+# What version is OpenOrder on?
 
+Open order is on <ins>**OpenOrder Alpha 1**</ins>
 
 
 ## What is OpenStall?
