@@ -1,0 +1,36 @@
+
+<html>
+<head><title>Sonic Fast Food Menu</title></head>
+<body>
+    <h1>Sonic Fast Food Menu</h1>
+    <div>
+        <img src='/assets/burger.jpg' alt='Sonic Burger' width='200'>
+        <p>Sonic Burger</p>
+        <button onclick='sendToAll()'>Send Menu to All</button>
+    </div>
+    <div>
+        <img src='/assets/fries.jpg' alt='Sonic Fries' width='200'>
+        <p>Sonic Fries</p>
+        <button onclick='sendToAll()'>Send Menu to All</button>
+    </div>
+    <div>
+        <img src='/assets/milkshake.jpg' alt='Sonic Milkshake' width='200'>
+        <p>Sonic Milkshake</p>
+        <button onclick='sendToAll()'>Send Menu to All</button>
+    </div>
+    <div>
+        <img src='/assets/tots.jpg' alt='Sonic Tots' width='200'>
+        <p>Sonic Tater Tots</p>
+        <button onclick='sendToAll()'>Send Menu to All</button>
+    </div>
+
+    <script>
+        function sendToAll() {
+            fetch('/sendmenu', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert('Menu sent to all users!'))
+                .catch(error => console.error('Error sending menu:', error));
+        }
+    </script>
+</body>
+</html>

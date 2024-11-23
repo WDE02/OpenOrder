@@ -1,0 +1,2 @@
+theme=dark
+storagepath=config/settings/openorder
